@@ -1,0 +1,126 @@
+/* Globalna tema Kinetic — roza i ljubičasta paleta */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primarna-roza: #e91e63;
+  --primarna-ljubicasta: #9c27b0;
+  --akcent: #ff4081;
+  --pozadina: #fdf4f8;
+  --tekst-tamni: #2d2438;
+  --gradijent-primarni: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+}
+
+/* Osnovna tipografija i pozadina cijele aplikacije */
+body,
+#app {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--pozadina);
+  color: var(--tekst-tamni);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: var(--tekst-tamni);
+}
+
+/* Zaobljene kartice s mekom sjenom */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(45, 36, 56, 0.08);
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(233, 30, 99, 0.12);
+  background-color: transparent;
+}
+
+/* Primarna i uspješna dugmad — gradijent umjesto bootstrap boja */
+.btn-primary,
+.btn-success {
+  background: var(--gradijent-primarni);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  transition: box-shadow 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-success:hover,
+.btn-success:focus {
+  background: var(--gradijent-primarni);
+  border: none;
+  color: #fff;
+  filter: brightness(0.95);
+  box-shadow: 0 6px 16px rgba(156, 39, 176, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.btn-success:active {
+  background: var(--gradijent-primarni);
+  filter: brightness(0.9);
+  transform: translateY(0);
+}
+
+.btn-primary:disabled,
+.btn-success:disabled {
+  background: var(--gradijent-primarni);
+  opacity: 0.65;
+}
+
+/* Navigacija — gradijent umjesto tamno sive */
+.navbar,
+.navbar-dark {
+  background: var(--gradijent-primarni) !important;
+  border: none;
+  box-shadow: 0 2px 12px rgba(156, 39, 176, 0.25);
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link,
+.navbar-dark .navbar-text {
+  color: #fff !important;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Linkovi i primarni akcenti */
+a {
+  color: var(--primarna-roza);
+}
+
+a:hover {
+  color: var(--primarna-ljubicasta);
+  text-decoration: none;
+}
+
+.router-link-active {
+  font-weight: 600;
+}
+
+/* Diskretni sekundarni tekst ostaje prigušen */
+.text-muted {
+  color: #6c5f7a !important;
+}
+
+/* Liste i okviri u skladu s temom */
+.list-group-item {
+  border-color: rgba(233, 30, 99, 0.12);
+}
+
+.list-group-item-warning {
+  background-color: rgba(255, 64, 129, 0.12);
+  border-color: rgba(233, 30, 99, 0.2);
+  color: var(--tekst-tamni);
+}
